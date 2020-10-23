@@ -7,8 +7,20 @@ namespace OOP_Shape.Shapes
     abstract class Shapes
     {
 
-        public abstract string Aria { get; }
-        public abstract string Perimeter { get; }
+        //abstract public  double Aria { get; }
+        abstract public double Perimeter { get; }
         public string Color { get; set; }
+
+
+        public Shapes()
+        {
+           
+            Color = "Black";
+        }
+        public Shapes(string color)
+        {
+           
+            Color = color;
+        }
     }
 }
