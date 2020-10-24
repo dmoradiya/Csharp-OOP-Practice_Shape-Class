@@ -10,19 +10,24 @@ namespace OOP_Shape
         public List<Shape> Shapes { get; set; }
         public double SpaceCovered { get; }
         public double LinesDrawn { get; }
+        
 
 
-        public void Draw()
+        public void Draw(Shape shape)
         {
-            Circle circle = new Circle();
-            Rectangle rectangle = new Rectangle();
-            Triangle triangle = new Triangle();
-            Shapes.Add(circle);
-            Shapes.Add(rectangle);
-            Shapes.Add(triangle);
-            foreach (Shape shape in Shapes)
+            //Circle circle = new Circle();
+            //Rectangle rectangle = new Rectangle();
+            //Triangle triangle = new Triangle();
+            //Shapes.Add(circle);
+            //Shapes.Add(rectangle);
+            //Shapes.Add(triangle);
+            
+            Shapes.Add(shape);
+            foreach (Shape items in Shapes)
             {
-                Console.WriteLine(shape.Aria );
+                
+                Console.WriteLine(items.Aria);
+                Console.WriteLine(items.Perimeter);
             }
 
         }
@@ -30,15 +35,14 @@ namespace OOP_Shape
         public Drawing()
         {
             Shapes = new List<Shape>();
-            SpaceCovered = 10;
-            LinesDrawn = 20;
+            
         }
-        //public override string ToString()
-        //{
-        //    return $"A drawing consisting of X {Shapes}. where X is the number of items in “Shapes”.";
-        //}
-        
-        
-        
+        public override string ToString()
+        {
+            return $"A drawing consisting of X Shape. where X is the number of items in “Shapes”. Area : Peremeter :";
+        }
+
+
+
     }
 }

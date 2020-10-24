@@ -9,7 +9,8 @@ namespace OOP_Shape
         {
             Drawing drawing = new Drawing();
             
-            drawing.Draw();
+            drawing.Draw(new Circle());
+            Console.WriteLine(drawing);
         }
     }
 }

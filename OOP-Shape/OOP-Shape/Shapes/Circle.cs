@@ -33,9 +33,13 @@ namespace OOP_Shape.Shapes
         public Circle()
         {
             Radius = 10;
+            Console.WriteLine("You Selected Circle Shape");
           
         }
-            
+       
+
+
+
 
     }
 }
