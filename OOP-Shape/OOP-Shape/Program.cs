@@ -7,7 +7,9 @@ namespace OOP_Shape
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Drawing drawing = new Drawing();
+            
+            drawing.Draw();
         }
     }
 }

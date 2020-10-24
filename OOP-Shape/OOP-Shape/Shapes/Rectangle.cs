@@ -4,11 +4,25 @@ using System.Text;
 
 namespace OOP_Shape.Shapes
 {
-    class Rectangle
+    class Rectangle : Shape
     {
 
         public double Length { get; set; }
         public double Width { get; set; }
+        public override double Perimeter
+        {
+            get
+            {
+                return 2 *Length + 2*Width ;
+            }
+        }
+        public override double Aria
+        {
+            get
+            {
+                return Length*Width;
+            }
+        }
 
         public Rectangle()
         {

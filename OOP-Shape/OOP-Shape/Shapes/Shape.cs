@@ -7,7 +7,7 @@ namespace OOP_Shape.Shapes
     abstract class Shape
     {
 
-        //abstract public  double Aria { get; }
+        abstract public  double Aria { get; }
         abstract public double Perimeter { get; }
         public string Color { get; set; }
 
@@ -21,6 +21,7 @@ namespace OOP_Shape.Shapes
         {
            
             Color = color;
+           
         }
     }
 }

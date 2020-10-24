@@ -22,10 +22,18 @@ namespace OOP_Shape.Shapes
                 return 2 * 3.14 * Radius;
             }
         }
+        public override double Aria 
+        {
+            get
+            {
+                return 3.14 * Radius*Radius;
+            }
+        }
 
         public Circle()
         {
             Radius = 10;
+          
         }
             
 
