@@ -8,6 +8,12 @@ namespace OOP_Shape.Shapes
     {
         public double Base { get; set; }
         public double Height { get; set; }
+
+        public Triangle()
+        {
+            Base = 10;
+            Height = 20;
+        }
         
 
     }

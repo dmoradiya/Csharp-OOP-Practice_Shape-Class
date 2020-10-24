@@ -4,7 +4,7 @@ using System.Text;
 
 namespace OOP_Shape.Shapes
 {
-    class Circle : Shapes
+    class Circle : Shape
     {
 
         public double Radius { get; set; }
@@ -19,9 +19,15 @@ namespace OOP_Shape.Shapes
         {
             get
             {
-                return 2*3.14*Radius;
+                return 2 * 3.14 * Radius;
             }
         }
+
+        public Circle()
+        {
+            Radius = 10;
+        }
+            
 
     }
 }

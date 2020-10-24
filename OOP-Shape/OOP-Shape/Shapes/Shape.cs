@@ -4,7 +4,7 @@ using System.Text;
 
 namespace OOP_Shape.Shapes
 {
-    abstract class Shapes
+    abstract class Shape
     {
 
         //abstract public  double Aria { get; }
@@ -12,12 +12,12 @@ namespace OOP_Shape.Shapes
         public string Color { get; set; }
 
 
-        public Shapes()
+        public Shape()
         {
            
             Color = "Black";
         }
-        public Shapes(string color)
+        public Shape(string color)
         {
            
             Color = color;

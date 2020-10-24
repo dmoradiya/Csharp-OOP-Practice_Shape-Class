@@ -9,5 +9,12 @@ namespace OOP_Shape.Shapes
 
         public double Length { get; set; }
         public double Width { get; set; }
+
+        public Rectangle()
+        {
+            Length = 10;
+            Width = 5;
+        }
     }
+   
 }
