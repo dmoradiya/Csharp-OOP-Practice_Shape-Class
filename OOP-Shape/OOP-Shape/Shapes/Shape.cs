@@ -16,6 +16,7 @@ namespace OOP_Shape.Shapes
         {
            
             Color = "Black";
+            
         }
         public Shape(string color)
         {

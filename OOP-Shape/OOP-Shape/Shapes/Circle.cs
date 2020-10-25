@@ -32,6 +32,7 @@ namespace OOP_Shape.Shapes
         public Circle()
         {
             Radius = 10.00;
+            
         }
         public Circle(string color, double radius): base(color)
         {

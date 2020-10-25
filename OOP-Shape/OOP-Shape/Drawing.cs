@@ -8,10 +8,8 @@ namespace OOP_Shape
     class Drawing
     {
         public List<Shape> Shapes { get; set; }
-        public double SpaceCovered { get; }
+        public double SpaceCovered { get; } 
         public double LinesDrawn { get; }
-        public double shapeAria;
-        public double shapePerimeter;
         
 
 
@@ -27,9 +25,8 @@ namespace OOP_Shape
             Shapes.Add(shape);
             foreach (Shape type in Shapes)
             {
-                
-                shapePerimeter = type.Perimeter;
-                shapeAria = type.Aria;
+
+                Console.WriteLine($"Aria : {type.Aria}\nPerimeter : {type.Perimeter}");                
             }
 
         }
@@ -37,11 +34,12 @@ namespace OOP_Shape
         public Drawing()
         {
             Shapes = new List<Shape>();
+           
             
         }
         public override string ToString()
         {
-            return $"A drawing consisting of X Shape. where X is the number of items in “Shapes”, Area :{shapeAria} Peremeter :{shapePerimeter}";
+            return $"A drawing consisting of  {Shapes.Count} Shape. where {Shapes.Count} is the number of items in “Shapes”.";
         }
 
 
