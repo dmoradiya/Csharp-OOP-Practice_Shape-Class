@@ -27,6 +27,7 @@ namespace OOP_Shape.Shapes
         {
             Base = 10;
             Height = 20;
+            Console.WriteLine("You Selected Triangular Shape");
         }
         
 

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace OOP_Shape.Shapes
 {
-    class Circle : Shape
+    class Circle : Shape // Inheritance 
     {
 
         public double Radius { get; set; }
@@ -12,10 +12,10 @@ namespace OOP_Shape.Shapes
         {
             get
             {
-                return 2 * Radius;
+                return 2 * Radius; // Encapsulation
             }
         }
-        public override double Perimeter
+        public override double Perimeter // Abstraction
         {
             get
             {
@@ -29,11 +29,15 @@ namespace OOP_Shape.Shapes
                 return 3.14 * Radius*Radius;
             }
         }
-
         public Circle()
         {
-            Radius = 10;
-            Console.WriteLine("You Selected Circle Shape");
+            Radius = 10.00;
+        }
+        public Circle(string color, double radius): base(color)
+        {
+            Radius = radius;
+
+            Console.WriteLine("You Selected Circuler Shape");
           
         }
        

@@ -28,6 +28,7 @@ namespace OOP_Shape.Shapes
         {
             Length = 10;
             Width = 5;
+            Console.WriteLine("You Selected Rectangular Shape");
         }
     }
    

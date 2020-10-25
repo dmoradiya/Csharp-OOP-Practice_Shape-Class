@@ -10,10 +10,12 @@ namespace OOP_Shape
         public List<Shape> Shapes { get; set; }
         public double SpaceCovered { get; }
         public double LinesDrawn { get; }
+        public double shapeAria;
+        public double shapePerimeter;
         
 
 
-        public void Draw(Shape shape)
+        public void Draw(Shape shape) // Polymorphism
         {
             //Circle circle = new Circle();
             //Rectangle rectangle = new Rectangle();
@@ -23,11 +25,11 @@ namespace OOP_Shape
             //Shapes.Add(triangle);
             
             Shapes.Add(shape);
-            foreach (Shape items in Shapes)
+            foreach (Shape type in Shapes)
             {
                 
-                Console.WriteLine(items.Aria);
-                Console.WriteLine(items.Perimeter);
+                shapePerimeter = type.Perimeter;
+                shapeAria = type.Aria;
             }
 
         }
@@ -39,7 +41,7 @@ namespace OOP_Shape
         }
         public override string ToString()
         {
-            return $"A drawing consisting of X Shape. where X is the number of items in “Shapes”. Area : Peremeter :";
+            return $"A drawing consisting of X Shape. where X is the number of items in “Shapes”, Area :{shapeAria} Peremeter :{shapePerimeter}";
         }
 
 
