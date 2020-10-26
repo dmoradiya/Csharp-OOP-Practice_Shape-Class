@@ -4,45 +4,33 @@ using System.Text;
 
 namespace OOP_Shape.Shapes
 {
-    class Circle : Shape // Inheritance 
+    // Pillar: Inheritance
+    class Circle : Shape
     {
+       
+        public override double Perimeter => Math.PI * Diameter;
+
+        public override double Area => Math.PI * Math.Pow(Radius, 2);
 
         public double Radius { get; set; }
+
         public double Diameter
         {
-            get
+            get => Radius * 2;
+            set
             {
-                return 2 * Radius; // Encapsulation
+                Radius = value / 2;
             }
         }
-        public override double Perimeter // Abstraction
-        {
-            get
-            {
-                return Math.PI * Math.Pow(Radius, 2);  // same as  : 3.14 * Radius * Radius;
 
-            }
-        }
-        public override double Aria 
-        {
-            get
-            {
-                return 3.14 * Radius*Radius;
-            }
-        }
         public Circle() : base()
         {
-            Radius = 10.00;
-            
+            Radius = 20;
         }
-        public Circle(string color, double radius): base(color)
+
+        public Circle(ColourValue colour, double radius) : base(colour)
         {
-            Radius = radius;        
+            Radius = radius;
         }
-       
-
-
-
-
     }
 }

@@ -4,25 +4,31 @@ using System.Text;
 
 namespace OOP_Shape.Shapes
 {
+    //Pillar : Abstraction
     abstract class Shape
     {
 
-        abstract public  double Aria { get; }
-        abstract public double Perimeter { get; }
-        public string Color { get; set; }
+        abstract public double Area { get; }
 
+        abstract public double Perimeter { get; }
+
+        public enum ColourValue
+        {
+            Red,
+            Green,
+            Blue
+        }
+
+        public ColourValue Colour { get; set; }
 
         public Shape()
         {
-           
-            Color = "Black";
-            
+            Colour = ColourValue.Red;
         }
-        public Shape(string color)
+
+        public Shape(ColourValue colour)
         {
-           
-            Color = color;
-           
+            Colour = colour;
         }
     }
 }

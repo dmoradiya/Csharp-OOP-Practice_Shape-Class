@@ -6,31 +6,23 @@ namespace OOP_Shape.Shapes
 {
     class Triangle : Shape
     {
+        public override double Perimeter => (Math.Sqrt(Math.Pow(Height, 2) + Math.Pow(Base / 2, 2)) * 2) + Base;
+
+
+        public override double Area => Base * Height / 2;
+
         public double Base { get; set; }
+
         public double Height { get; set; }
-        public override double Perimeter
-        {
-            get
-            {
-                return 3 * Base;
-            }
-        }
-        public override double Aria
-        {
-            get
-            {
-                return 0.5 * Base * Height; ;
-            }
-        }
 
         public Triangle() : base()
         {
-            Base = 10;
-            Height = 20;
+            Base = 20;
+            Height = 10;
         }
-        public Triangle(string color, double bottom, double height) : base(color)
+
+        public Triangle(ColourValue colour, double bottom, double height) : base(colour)
         {
-            Color = color;
             Base = bottom;
             Height = height;
         }

@@ -7,31 +7,56 @@ namespace OOP_Shape.Shapes
     class Rectangle : Shape
     {
 
-        public double Length { get; set; }
-        public double Width { get; set; }
-        public override double Perimeter
+        public override double Perimeter => (Length + Width) * 2;
+
+        public override double Area => Length * Width;
+
+        double _length;
+        public double Length
         {
-            get
+            get => _length;
+            set
             {
-                return 2 *Length + 2*Width ;
+                // The new Length value is shorter than the current Width value.
+                if (value < Width)
+                {
+                    _length = Width;
+                    Width = value;
+                }
+                else
+                {
+                    _length = value;
+                }
             }
         }
-        public override double Aria
+
+        double _width;
+        public double Width
         {
-            get
+            get => _width;
+            set
             {
-                return Length*Width;
+                // The new Width value is longer than the current Length value.
+                if (value > Length)
+                {
+                    _width = Length;
+                    Length = value;
+                }
+                else
+                {
+                    _width = value;
+                }
             }
         }
 
         public Rectangle() : base()
         {
-            Length = 10;
-            Width = 5;
+            Length = 20;
+            Width = 10;
         }
-        public Rectangle(string color, double length, double width) : base(color)
+
+        public Rectangle(ColourValue colour, double length, double width) : base(colour)
         {
-            Color = color;
             Length = length;
             Width = width;
         }

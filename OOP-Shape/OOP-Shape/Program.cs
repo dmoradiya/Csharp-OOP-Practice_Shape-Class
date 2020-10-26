@@ -7,14 +7,22 @@ namespace OOP_Shape
     {
         static void Main(string[] args)
         {
-            Drawing drawing = new Drawing();
-            
-            drawing.Draw(new Circle());
-            drawing.Draw(new Rectangle());
-            drawing.Draw(new Triangle());
-            Console.WriteLine(drawing);
-            Console.WriteLine(drawing.SpaceCovered);
-            Console.WriteLine(drawing.LinesDrawn);
+            Drawing myDrawing = new Drawing();
+            Circle myCircle = new Circle(Shape.ColourValue.Blue, 10);
+            myDrawing.Draw(myCircle);
+            Rectangle myRectangle = new Rectangle(Shape.ColourValue.Green, 10, 10);
+            myDrawing.Draw(myRectangle);
+
+            myRectangle.Width = 12;
+
+            myCircle.Diameter = 25;
+
+            // Circle: Perimeter ~64, Area ~314
+            // Rect: Perimeter 40, Area 100
+
+            Console.WriteLine(myDrawing);
+            Console.WriteLine(myDrawing.LinesDrawn);
+            Console.WriteLine(myDrawing.SpaceCovered);
         }
     }
 }
