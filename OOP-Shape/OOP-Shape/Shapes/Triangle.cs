@@ -23,13 +23,18 @@ namespace OOP_Shape.Shapes
             }
         }
 
-        public Triangle()
+        public Triangle() : base()
         {
             Base = 10;
             Height = 20;
-            Console.WriteLine("You Selected Triangular Shape");
         }
-        
+        public Triangle(string color, double bottom, double height) : base(color)
+        {
+            Color = color;
+            Base = bottom;
+            Height = height;
+        }
+
 
     }
 }

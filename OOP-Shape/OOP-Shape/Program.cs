@@ -10,7 +10,11 @@ namespace OOP_Shape
             Drawing drawing = new Drawing();
             
             drawing.Draw(new Circle());
+            drawing.Draw(new Rectangle());
+            drawing.Draw(new Triangle());
             Console.WriteLine(drawing);
+            Console.WriteLine(drawing.SpaceCovered);
+            Console.WriteLine(drawing.LinesDrawn);
         }
     }
 }

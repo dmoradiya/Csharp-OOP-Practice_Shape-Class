@@ -7,9 +7,32 @@ namespace OOP_Shape
 {
     class Drawing
     {
-        public List<Shape> Shapes { get; set; }
-        public double SpaceCovered { get; } 
-        public double LinesDrawn { get; }
+        private List<Shape> Shapes { get; set; }
+        public double SpaceCovered
+        {
+            get
+            {
+                double total = 0;
+                foreach (Shape type in Shapes)
+                {
+                    total += type.Aria;
+                }
+                return total;
+            }
+        }
+        public double LinesDrawn
+        { 
+            get
+            {
+                double total = 0;
+                foreach (Shape type in Shapes)
+                {
+                    total += type.Perimeter;
+                }
+                return total;
+            }
+                
+        }
         
 
 
@@ -23,11 +46,7 @@ namespace OOP_Shape
             //Shapes.Add(triangle);
             
             Shapes.Add(shape);
-            foreach (Shape type in Shapes)
-            {
-
-                Console.WriteLine($"Aria : {type.Aria}\nPerimeter : {type.Perimeter}");                
-            }
+           
 
         }
         

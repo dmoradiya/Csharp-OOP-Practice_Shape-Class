@@ -19,7 +19,8 @@ namespace OOP_Shape.Shapes
         {
             get
             {
-                return 2 * 3.14 * Radius;
+                return Math.PI * Math.Pow(Radius, 2);  // same as  : 3.14 * Radius * Radius;
+
             }
         }
         public override double Aria 
@@ -29,17 +30,14 @@ namespace OOP_Shape.Shapes
                 return 3.14 * Radius*Radius;
             }
         }
-        public Circle()
+        public Circle() : base()
         {
             Radius = 10.00;
             
         }
         public Circle(string color, double radius): base(color)
         {
-            Radius = radius;
-
-            Console.WriteLine("You Selected Circuler Shape");
-          
+            Radius = radius;        
         }
        
 

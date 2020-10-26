@@ -24,11 +24,16 @@ namespace OOP_Shape.Shapes
             }
         }
 
-        public Rectangle()
+        public Rectangle() : base()
         {
             Length = 10;
             Width = 5;
-            Console.WriteLine("You Selected Rectangular Shape");
+        }
+        public Rectangle(string color, double length, double width) : base(color)
+        {
+            Color = color;
+            Length = length;
+            Width = width;
         }
     }
    
